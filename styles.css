@@ -103,7 +103,7 @@ em   { font-style: italic; }
 .tag--dark { background: var(--black); color: var(--cream); }
 
 .big-title {
-    font-size: clamp(var(--t-3xl), 4vw, var(--t-5xl));
+    font-size: clamp(3rem, 5.5vw, 4.5rem);
     font-weight: 900;
     line-height: 1.08;
     letter-spacing: -0.03em;
@@ -120,8 +120,9 @@ em   { font-style: italic; }
     height: auto;
 }
 .deco--bl       { bottom: var(--s6); left: var(--s8); }
+.deco--br       { bottom: var(--s6); right: var(--s8); width: 160px; }
 .deco--tr       { top: var(--s6); right: var(--s8); width: 180px; }
-.deco--tr-small { top: var(--s6); right: var(--s8); width: 140px; }
+.deco--tr-small { top: var(--s6); right: var(--s8); width: 130px; }
 
 /* ============================================================
    BOUTONS
@@ -298,12 +299,17 @@ em   { font-style: italic; }
     color: rgba(245,228,192,0.35);
     transition: color var(--ease);
 }
-.menu-footer__link:hover { color: var(--cream); }
+.menu-footer__link:hover { color: var(--pink); }
 .menu-footer .btn--cream {
     padding: 0.6rem 1.4rem;
     min-height: 40px;
     font-size: var(--t-sm);
     color: var(--black);
+}
+.menu-footer .btn--cream:hover {
+    background: var(--pink);
+    color: var(--black);
+    border-color: var(--pink);
 }
 
 /* ============================================================
@@ -347,9 +353,9 @@ em   { font-style: italic; }
     gap: var(--s5);
 }
 
-/* Titre crème */
+/* Titre crème — même taille que les titres des autres sections */
 .hero-title {
-    font-size: clamp(var(--t-3xl), 5vw, var(--t-5xl));
+    font-size: clamp(3rem, 5.5vw, 4.5rem);
     font-weight: 900;
     line-height: 1.06;
     letter-spacing: -0.03em;
@@ -446,7 +452,7 @@ em   { font-style: italic; }
     inset: 0;
     display: flex;
     flex-direction: column;
-    padding: 5.5rem var(--s12) var(--s10);
+    padding: 5.5rem var(--s8) var(--s10);
     gap: var(--s6);
 }
 
@@ -533,7 +539,7 @@ em   { font-style: italic; }
 }
 .prog-row--accent .prog-row__num   { color: var(--pink); }
 .prog-row--accent .prog-row__title { color: var(--pink); }
-.prog-row--accent .prog-row__desc  { color: rgba(245,228,192,0.65); }
+.prog-row--accent .prog-row__desc  { color: var(--pink); }
 
 /* ============================================================
    INFOS PRATIQUES
