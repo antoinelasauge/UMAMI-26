@@ -43,6 +43,15 @@
         if (e.target === overlay) closeMenu();
     });
 
+    /* ---- Scroll hint ---- */
+    var scrollHint = document.getElementById('scroll-hint');
+    if (scrollHint) {
+        scrollHint.addEventListener('click', function () {
+            var about = document.getElementById('about');
+            if (about) about.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+
     /* ---- Navigation snap ---- */
     links.forEach(function (link) {
         link.addEventListener('click', function (e) {
