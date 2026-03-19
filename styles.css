@@ -119,6 +119,21 @@ em   { font-style: italic; }
     width: 200px;
     height: auto;
 }
+
+/* Illustrations bocaux / bouteilles */
+.illus {
+    position: absolute;
+    pointer-events: none;
+    height: auto;
+}
+.illus--hero    { bottom: 8rem;  right: 5rem;  width: 44px; z-index: 1; transform: rotate(8deg); }
+.illus--fest    { bottom: 5rem;  right: 2rem;  width: 58px; transform: rotate(-6deg); }
+.illus--prog    { bottom: 4.5rem; left: 3rem;  width: 62px; transform: rotate(5deg); }
+.illus--infos   { bottom: 5rem;  right: 2rem;  width: 50px; transform: rotate(-7deg); }
+
+@media (max-width: 768px) {
+    .illus { display: none; }
+}
 .deco--bl       { bottom: var(--s6); left: var(--s8); }
 .deco--br       { bottom: var(--s6); right: var(--s8); width: 160px; }
 /* Déco menu : plus grande que la version page */
