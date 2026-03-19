@@ -340,11 +340,11 @@ em   { font-style: italic; }
     z-index: 1;
 }
 
-/* Texte aligné avec le burger : même top, décalé à droite */
+/* Texte sous le burger — même position que les autres sections */
 .hero-content {
     position: absolute;
-    top: var(--s8);
-    left: 9rem;
+    top: 5.5rem;
+    left: var(--s8);
     right: var(--s12);
     z-index: 2;
     display: flex;
@@ -382,13 +382,13 @@ em   { font-style: italic; }
     display: flex;
 }
 
-/* Colonne gauche */
+/* Colonne gauche — contenu aligné sous le burger */
 .split-left {
     flex: 0 0 42%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: var(--s12);
+    justify-content: flex-start;
+    padding: 5.5rem var(--s12) var(--s12);
     gap: var(--s6);
     position: relative;
 }
@@ -472,15 +472,7 @@ em   { font-style: italic; }
     flex-shrink: 0;
 }
 
-/* Frise SVG — logo DNA arches (hauteur fixe pour éviter l'étirement) */
-.prog-frieze {
-    flex: 1;
-    height: 70px;
-    min-height: 70px;
-    max-height: 70px;
-    min-width: 0;
-    align-self: flex-end;
-}
+/* prog-frieze supprimée */
 
 /* Liste éditoriale */
 .prog-list {
@@ -537,7 +529,7 @@ em   { font-style: italic; }
 .prog-row--accent {
     border-bottom: 1px solid rgba(244,167,191,0.25);
 }
-.prog-row--accent .prog-row__num   { color: var(--pink); }
+.prog-row--accent .prog-row__num   { color: var(--cream); }
 .prog-row--accent .prog-row__title { color: var(--pink); }
 .prog-row--accent .prog-row__desc  { color: var(--pink); }
 
@@ -617,14 +609,14 @@ em   { font-style: italic; }
     .menu-trigger { top: var(--s6); left: var(--s6); }
 
     .hero-content {
-        top: var(--s6);
-        left: var(--s16);
+        top: 5.5rem;
+        left: var(--s6);
         right: var(--s6);
         gap: var(--s4);
     }
 
     .split-layout  { flex-direction: column; }
-    .split-left    { flex: 0 0 auto; min-height: 38vh; padding: var(--s8) var(--s6); justify-content: flex-end; }
+    .split-left    { flex: 0 0 auto; min-height: 38vh; padding: 5.5rem var(--s6) var(--s6); justify-content: flex-start; }
     .split-right   { flex: 1; padding: var(--s8) var(--s6); }
 
     .prog-layout   { padding: var(--s8) var(--s6); gap: var(--s6); }
