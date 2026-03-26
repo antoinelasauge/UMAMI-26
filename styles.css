@@ -262,7 +262,7 @@ em   { font-style: italic; }
 .menu-overlay {
     position: fixed;
     inset: 0;
-    z-index: 250;
+    z-index: 1100;
     background: var(--black);
     display: flex;
     flex-direction: column;
@@ -1565,7 +1565,7 @@ body.modal-is-open { overflow: hidden; }
 .modal {
     position: fixed;
     inset: 0;
-    z-index: 1000;
+    z-index: 1200;
     background: rgba(17,17,17,0.7);
     backdrop-filter: blur(4px);
     display: flex;
