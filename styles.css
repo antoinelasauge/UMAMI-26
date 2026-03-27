@@ -2315,10 +2315,15 @@ body.modal-is-open { overflow: hidden; }
     .about-body { font-size: var(--t-sm); line-height: 1.65; }
 
     /* ---- 3. Programme — texte + CTA, sans photos ---- */
+    #programme {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
     .prog2-layout {
         position: static;
-        height: 100%;
-        overflow-y: auto;
+        height: auto;
+        overflow: visible;
         padding: 4.5rem var(--s5) var(--s6);
         display: flex;
         flex-direction: column;
@@ -2334,7 +2339,8 @@ body.modal-is-open { overflow: hidden; }
     .prog-illus { display: none; }
 
     /* ---- 4. Banquet — sans portraits, CTAs visibles ---- */
-    .banquet-wrap { display: flex; flex-direction: column; overflow-y: auto; }
+    #banquet { height: auto; min-height: 100vh; overflow: visible; }
+    .banquet-wrap { position: static; display: flex; flex-direction: column; overflow: visible; }
     .banquet-header { padding: 4.5rem var(--s5) var(--s4); }
     .banquet-title { font-size: clamp(2rem, 8vw, 3rem); }
     .banquet-cheffes { display: none; }
@@ -2351,15 +2357,16 @@ body.modal-is-open { overflow: hidden; }
     .banquet-strip__ctas .btn { width: 100%; box-sizing: border-box; justify-content: center; }
 
     /* ---- 5. Infos — sans colonne gauche ni carte ---- */
-    .split-layout { flex-direction: column; }
+    #infos { height: auto; min-height: 100vh; overflow: visible; }
+    .split-layout { flex-direction: column; position: static; height: auto; }
     .split-left { display: none; }
     .split-right {
         flex: 1;
         width: 100%;
-        height: 100%;
+        height: auto;
         min-height: 100vh;
         padding: 5rem var(--s5) var(--s8);
-        overflow-y: auto;
+        overflow: visible;
     }
     .map-container { display: none; }
     .info-row__value { font-size: var(--t-base); }
