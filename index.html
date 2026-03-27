@@ -20,6 +20,9 @@
     <meta name="twitter:card"       content="summary_large_image">
     <meta name="theme-color"        content="#F4A7BF">
 
+    <!-- Umami Analytics — remplacer TON-WEBSITE-ID par l'ID obtenu sur umami.is -->
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="TON-WEBSITE-ID"></script>
+
     <link rel="preconnect" href="https://unpkg.com">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
     <link rel="stylesheet" href="styles.css">
@@ -56,10 +59,10 @@
             <p>Organisateur.ices : Antoine Devins (<a href="https://www.instagram.com/lagronaute/" class="menu-copy__link" target="_blank" rel="noopener noreferrer">Agronaute</a>), Esther Alcover, Ghita Taghi (<a href="https://www.instagram.com/ateliers.hara/" class="menu-copy__link" target="_blank" rel="noopener noreferrer">Ateliers Hara</a>)</p>
         </div>
         <div class="menu-footer">
-            <a href="https://shotgun.live/fr/festivals/les-ateliers-umami-2026-18-19-avril" class="btn btn--cream menu-footer__cta" target="_blank" rel="noopener noreferrer">Billetterie Ateliers</a>
-            <a href="https://shotgun.live/fr/festivals/umami-5-banquet-fermente" class="btn btn--cream menu-footer__cta" target="_blank" rel="noopener noreferrer">Billetterie Banquet</a>
-            <a href="https://www.instagram.com/umami_fermentation/" class="menu-footer__link" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://www.facebook.com/events/935576342183844/" class="menu-footer__link" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://shotgun.live/fr/festivals/les-ateliers-umami-2026-18-19-avril" class="btn btn--cream menu-footer__cta" target="_blank" rel="noopener noreferrer" data-umami-event="billetterie-ateliers-menu">Billetterie Ateliers</a>
+            <a href="https://shotgun.live/fr/festivals/umami-5-banquet-fermente" class="btn btn--cream menu-footer__cta" target="_blank" rel="noopener noreferrer" data-umami-event="billetterie-banquet-menu">Billetterie Banquet</a>
+            <a href="https://www.instagram.com/umami_fermentation/" class="menu-footer__link" target="_blank" rel="noopener noreferrer" data-umami-event="social-instagram-menu">Instagram</a>
+            <a href="https://www.facebook.com/events/935576342183844/" class="menu-footer__link" target="_blank" rel="noopener noreferrer" data-umami-event="social-facebook-menu">Facebook</a>
         </div>
     </nav>
 
@@ -87,8 +90,8 @@
                     <span>L'Agronaute, Nantes</span>
                 </div>
                 <div class="hero-ctas">
-                    <a href="https://shotgun.live/fr/festivals/les-ateliers-umami-2026-18-19-avril" class="btn btn--cream" target="_blank" rel="noopener noreferrer">Billetterie Ateliers</a>
-                    <a href="https://shotgun.live/fr/festivals/umami-5-banquet-fermente" class="btn btn--pink" target="_blank" rel="noopener noreferrer">Billetterie Banquet</a>
+                    <a href="https://shotgun.live/fr/festivals/les-ateliers-umami-2026-18-19-avril" class="btn btn--cream" target="_blank" rel="noopener noreferrer" data-umami-event="billetterie-ateliers-hero">Billetterie Ateliers</a>
+                    <a href="https://shotgun.live/fr/festivals/umami-5-banquet-fermente" class="btn btn--pink" target="_blank" rel="noopener noreferrer" data-umami-event="billetterie-banquet-hero">Billetterie Banquet</a>
                 </div>
             </div>
 
@@ -160,7 +163,7 @@
                         <div class="prog2-bloc__body">
                             <h3 class="prog2-bloc__title">Marché de producteur·ices</h3>
                             <p class="prog2-bloc__desc">Le marché de producteur·ices revient avec une trentaine de stands : pain, fromage, miso, kimchi, légumes fermentés et boissons.</p>
-                            <button class="btn btn--dark prog2-bloc__cta" data-modal-open="modal-marche">Voir les exposant·es</button>
+                            <button class="btn btn--dark prog2-bloc__cta" data-modal-open="modal-marche" data-umami-event="modal-marche">Voir les exposant·es</button>
                         </div>
                     </div>
 
@@ -172,8 +175,8 @@
                             <h3 class="prog2-bloc__title">Ateliers</h3>
                             <p class="prog2-bloc__desc">Que serait UMAMI, la fête de la fermentation, sans ses ateliers autour de l'alimentation vivante et des boissons pétillantes ?</p>
                             <div class="prog2-bloc__ctas">
-                                <button class="btn btn--dark" data-modal-open="modal-ateliers">En savoir +</button>
-                                <a href="https://shotgun.live/fr/festivals/les-ateliers-umami-2026-18-19-avril" class="btn btn--cream" target="_blank" rel="noopener noreferrer">Billetterie</a>
+                                <button class="btn btn--dark" data-modal-open="modal-ateliers" data-umami-event="modal-ateliers">En savoir +</button>
+                                <a href="https://shotgun.live/fr/festivals/les-ateliers-umami-2026-18-19-avril" class="btn btn--cream" target="_blank" rel="noopener noreferrer" data-umami-event="billetterie-ateliers-programme">Billetterie</a>
                             </div>
                         </div>
                     </div>
@@ -185,7 +188,7 @@
                         <div class="prog2-bloc__body">
                             <h3 class="prog2-bloc__title">Rencontres</h3>
                             <p class="prog2-bloc__desc">Le vivant une fabuleuse source d'inspiration et de réflexion. Venez écouter et échanger avec des fermenteur.euses passionné.e.s.</p>
-                            <button class="btn btn--dark prog2-bloc__cta" data-modal-open="modal-rencontres">Voir les rencontres</button>
+                            <button class="btn btn--dark prog2-bloc__cta" data-modal-open="modal-rencontres" data-umami-event="modal-rencontres">Voir les rencontres</button>
                         </div>
                     </div>
 
@@ -197,8 +200,8 @@
                             <h3 class="prog2-bloc__title">Programme Kids</h3>
                             <p class="prog2-bloc__desc">Cerise sur le gâteau et nouveauté pour les plus petits, nous vous avons préparé une programmation spéciale pour nos petits bouts de choux. Dès 5 ans.</p>
                             <div class="prog2-bloc__ctas">
-                                <button class="btn btn--dark" data-modal-open="modal-kids">En savoir +</button>
-                                <a href="https://shotgun.live/fr/festivals/les-ateliers-umami-2026-18-19-avril" class="btn btn--cream" target="_blank" rel="noopener noreferrer">Billetterie</a>
+                                <button class="btn btn--dark" data-modal-open="modal-kids" data-umami-event="modal-kids">En savoir +</button>
+                                <a href="https://shotgun.live/fr/festivals/les-ateliers-umami-2026-18-19-avril" class="btn btn--cream" target="_blank" rel="noopener noreferrer" data-umami-event="billetterie-ateliers-kids">Billetterie</a>
                             </div>
                         </div>
                     </div>
@@ -225,7 +228,7 @@
 
                 <!-- Bande 2 : les 3 cheffes côte à côte -->
                 <div class="banquet-cheffes">
-                    <button class="banquet-cheffe" data-modal-open="modal-adelie">
+                    <button class="banquet-cheffe" data-modal-open="modal-adelie" data-umami-event="modal-cheffe-adelie">
                         <div class="banquet-cheffe__avatar">
                             <img src="assets/images/portrait_adelie.png" alt="Adélie Delajot" loading="lazy">
                         </div>
@@ -234,7 +237,7 @@
                             <span class="banquet-cheffe__resto">Le Cellier, Nantes</span>
                         </div>
                     </button>
-                    <button class="banquet-cheffe" data-modal-open="modal-annie">
+                    <button class="banquet-cheffe" data-modal-open="modal-annie" data-umami-event="modal-cheffe-annie">
                         <div class="banquet-cheffe__avatar">
                             <img src="assets/images/portrait_annie.png" alt="Annie Mach" loading="lazy">
                         </div>
@@ -243,7 +246,7 @@
                             <span class="banquet-cheffe__resto">Cheffe itinérante</span>
                         </div>
                     </button>
-                    <button class="banquet-cheffe" data-modal-open="modal-gaelle">
+                    <button class="banquet-cheffe" data-modal-open="modal-gaelle" data-umami-event="modal-cheffe-gaelle">
                         <div class="banquet-cheffe__avatar">
                             <img src="assets/images/portrait_gaelle.png" alt="Gaëlle Valin" loading="lazy">
                         </div>
@@ -277,8 +280,8 @@
                             </div>
                         </div>
                         <div class="banquet-strip__ctas">
-                            <a href="https://shotgun.live/fr/festivals/umami-5-banquet-fermente" class="btn btn--dark" target="_blank" rel="noopener noreferrer">Réserver</a>
-                            <button class="btn btn--cream" data-modal-open="modal-menu-banquet">Voir le menu</button>
+                            <a href="https://shotgun.live/fr/festivals/umami-5-banquet-fermente" class="btn btn--dark" target="_blank" rel="noopener noreferrer" data-umami-event="billetterie-banquet-strip">Réserver</a>
+                            <button class="btn btn--cream" data-modal-open="modal-menu-banquet" data-umami-event="modal-menu-banquet">Voir le menu</button>
                         </div>
                     </div>
                 </div>
@@ -351,10 +354,10 @@
                     <p class="footer-tagline">Fête de la fermentation · Nantes</p>
                 </div>
                 <nav class="footer-nav" aria-label="Liens du bas de page">
-                    <a href="https://www.instagram.com/umami_fermentation/" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    <a href="https://www.facebook.com/events/935576342183844/" class="footer-link" target="_blank" rel="noopener noreferrer">Facebook</a>
-                    <a href="https://shotgun.live/fr/festivals/les-ateliers-umami-2026-18-19-avril" class="btn btn--pink footer-cta" target="_blank" rel="noopener noreferrer">Billetterie Ateliers</a>
-                    <a href="https://shotgun.live/fr/festivals/umami-5-banquet-fermente" class="btn btn--pink footer-cta" target="_blank" rel="noopener noreferrer">Billetterie Banquet</a>
+                    <a href="https://www.instagram.com/umami_fermentation/" class="footer-link" target="_blank" rel="noopener noreferrer" data-umami-event="social-instagram-footer">Instagram</a>
+                    <a href="https://www.facebook.com/events/935576342183844/" class="footer-link" target="_blank" rel="noopener noreferrer" data-umami-event="social-facebook-footer">Facebook</a>
+                    <a href="https://shotgun.live/fr/festivals/les-ateliers-umami-2026-18-19-avril" class="btn btn--pink footer-cta" target="_blank" rel="noopener noreferrer" data-umami-event="billetterie-ateliers-footer">Billetterie Ateliers</a>
+                    <a href="https://shotgun.live/fr/festivals/umami-5-banquet-fermente" class="btn btn--pink footer-cta" target="_blank" rel="noopener noreferrer" data-umami-event="billetterie-banquet-footer">Billetterie Banquet</a>
                 </nav>
             </div>
             <div class="footer-copy">
@@ -445,7 +448,8 @@
                         <h2 class="cta-title">Prêt·e à mettre les mains<br>dans la saumure ?</h2>
                         <a href="https://shotgun.live/fr/festivals/les-ateliers-umami-2026-18-19-avril"
                            class="btn btn--cream cta-btn"
-                           target="_blank" rel="noopener noreferrer">
+                           target="_blank" rel="noopener noreferrer"
+                           data-umami-event="billetterie-ateliers-livret">
                             Billetterie
                         </a>
                         <p class="cta-note">Places limitées</p>
