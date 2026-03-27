@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UMAMI#5 — Fête de la fermentation à Nantes</title>
     <meta name="description" content="UMAMI#5 — Fête de la fermentation. 18 & 19 avril 2026 à L'Agronaute, Nantes. Marché, ateliers, conférences, banquet fermenté.">
+    <link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
+
+    <!-- Open Graph — partage réseaux sociaux -->
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="https://umami-nantes.netlify.app/">
+    <meta property="og:title"       content="UMAMI#5 — Fête de la fermentation à Nantes">
+    <meta property="og:description" content="18 & 19 avril 2026 · L'Agronaute, Nantes · Marché, ateliers, rencontres et banquet fermenté.">
+    <meta property="og:image"       content="https://umami-nantes.netlify.app/assets/og-image.jpg">
+    <meta property="og:locale"      content="fr_FR">
+    <meta name="twitter:card"       content="summary_large_image">
+    <meta name="theme-color"        content="#F4A7BF">
+
+    <link rel="preconnect" href="https://unpkg.com">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -21,12 +34,12 @@
         <button class="menu-close" id="menu-close" aria-label="Fermer le menu">✕&nbsp;Fermer</button>
 
         <!-- Illustrations éparpillées dans le menu -->
-        <img src="assets/images/kimchi_vert.png"   class="menu-illus menu-illus--1" aria-hidden="true" alt="">
-        <img src="assets/images/fromage.png"       class="menu-illus menu-illus--2" aria-hidden="true" alt="">
-        <img src="assets/images/vin_naturel.png"   class="menu-illus menu-illus--3" aria-hidden="true" alt="">
-        <img src="assets/images/miso_soupe.png"    class="menu-illus menu-illus--4" aria-hidden="true" alt="">
-        <img src="assets/images/pickles_rose.png"  class="menu-illus menu-illus--5" aria-hidden="true" alt="">
-        <img src="assets/images/pain.png"          class="menu-illus menu-illus--6" aria-hidden="true" alt="">
+        <img src="assets/images/kimchi_vert.png"   class="menu-illus menu-illus--1" aria-hidden="true" alt="" loading="lazy">
+        <img src="assets/images/fromage.png"       class="menu-illus menu-illus--2" aria-hidden="true" alt="" loading="lazy">
+        <img src="assets/images/vin_naturel.png"   class="menu-illus menu-illus--3" aria-hidden="true" alt="" loading="lazy">
+        <img src="assets/images/miso_soupe.png"    class="menu-illus menu-illus--4" aria-hidden="true" alt="" loading="lazy">
+        <img src="assets/images/pickles_rose.png"  class="menu-illus menu-illus--5" aria-hidden="true" alt="" loading="lazy">
+        <img src="assets/images/pain.png"          class="menu-illus menu-illus--6" aria-hidden="true" alt="" loading="lazy">
 
         <ul class="menu-nav" role="list">
             <li><a href="#hero"      class="menu-nav__link" data-target="hero">      <span class="menu-nav__num">01</span>Accueil</a></li>
@@ -40,10 +53,10 @@
             <p>Organisateur.ices : Antoine Devins (<a href="https://www.instagram.com/lagronaute/" class="menu-copy__link" target="_blank" rel="noopener noreferrer">Agronaute</a>), Esther Alcover, Ghita Taghi (<a href="https://www.instagram.com/ateliers.hara/" class="menu-copy__link" target="_blank" rel="noopener noreferrer">Ateliers Hara</a>)</p>
         </div>
         <div class="menu-footer">
-            <a href="https://www.instagram.com/umami_fermentation/" class="menu-footer__link" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://www.facebook.com/events/935576342183844/" class="menu-footer__link" target="_blank" rel="noopener noreferrer">Facebook</a>
             <a href="https://shotgun.live/fr/festivals/les-ateliers-umami-2026-18-19-avril" class="btn btn--cream menu-footer__cta" target="_blank" rel="noopener noreferrer">Billetterie Ateliers</a>
             <a href="https://shotgun.live/fr/festivals/umami-5-banquet-fermente" class="btn btn--cream menu-footer__cta" target="_blank" rel="noopener noreferrer">Billetterie Banquet</a>
+            <a href="https://www.instagram.com/umami_fermentation/" class="menu-footer__link" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.facebook.com/events/935576342183844/" class="menu-footer__link" target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
     </nav>
 
@@ -92,9 +105,9 @@
             <span class="tag tag--pink about-tag">5e édition</span>
 
             <!-- Illustrations — fond noir, entièrement visibles -->
-            <img src="assets/images/kimchi_rouge.png" class="about-illus-l" aria-hidden="true" alt="">
-            <img src="assets/images/pain.png"         class="about-illus-r" aria-hidden="true" alt="">
-            <img src="assets/images/miso_soupe.png"   class="about-illus-c" aria-hidden="true" alt="">
+            <img src="assets/images/kimchi_rouge.png" class="about-illus-l" aria-hidden="true" alt="" loading="lazy">
+            <img src="assets/images/pain.png"         class="about-illus-r" aria-hidden="true" alt="" loading="lazy">
+            <img src="assets/images/miso_soupe.png"   class="about-illus-c" aria-hidden="true" alt="" loading="lazy">
 
             <div class="about-layout">
                 <div class="about-grid">
@@ -121,18 +134,18 @@
                     <span class="prog-pdf__text">Programme complet</span>
                     <span class="prog-pdf__arrow">↓</span>
                 </a>
-                <img src="assets/images/mangue.png" class="prog-pdf__illus" alt="" aria-hidden="true">
+                <img src="assets/images/mangue.png" class="prog-pdf__illus" alt="" aria-hidden="true" loading="lazy">
             </div>
 
             <!-- Illustrations cartoon -->
-            <img src="assets/images/kombucha_rose.png" class="prog2-illus prog2-illus--1" alt="" aria-hidden="true">
-            <img src="assets/images/kimchi_vert.png"   class="prog2-illus prog2-illus--2" alt="" aria-hidden="true">
+            <img src="assets/images/kombucha_rose.png" class="prog2-illus prog2-illus--1" alt="" aria-hidden="true" loading="lazy">
+            <img src="assets/images/kimchi_vert.png"   class="prog2-illus prog2-illus--2" alt="" aria-hidden="true" loading="lazy">
 
             <div class="prog2-layout">
 
                 <div class="prog2-header">
                     <span class="tag tag--pink">Programme</span>
-                    <h2 class="big-title">Deux jours,<br>plein de choses.</h2>
+                    <h2 class="big-title">48h de<br>fermentation.</h2>
                 </div>
 
                 <div class="prog2-grid">
@@ -140,7 +153,7 @@
                     <!-- 01 Marché de producteur·ices -->
                     <div class="prog2-bloc">
                         <span class="prog2-bloc__num" aria-hidden="true">01</span>
-                        <div class="prog2-bloc__photo"><img src="assets/images/photo_marche.jpg" alt="Marché de producteur·ices UMAMI"></div>
+                        <div class="prog2-bloc__photo"><img src="assets/images/photo_marche.jpg" alt="Marché de producteur·ices UMAMI" loading="lazy"></div>
                         <div class="prog2-bloc__body">
                             <h3 class="prog2-bloc__title">Marché de producteur·ices</h3>
                             <p class="prog2-bloc__desc">Le marché de producteur·ices revient avec une trentaine de stands : pain, fromage, miso, kimchi, légumes fermentés et boissons.</p>
@@ -151,7 +164,7 @@
                     <!-- 02 Ateliers -->
                     <div class="prog2-bloc">
                         <span class="prog2-bloc__num" aria-hidden="true">02</span>
-                        <div class="prog2-bloc__photo"><img src="assets/images/photo_ateliers.jpg" alt="Ateliers UMAMI"></div>
+                        <div class="prog2-bloc__photo"><img src="assets/images/photo_ateliers.jpg" alt="Ateliers UMAMI" loading="lazy"></div>
                         <div class="prog2-bloc__body">
                             <h3 class="prog2-bloc__title">Ateliers</h3>
                             <p class="prog2-bloc__desc">Que serait UMAMI, la fête de la fermentation, sans ses ateliers autour de l'alimentation vivante et des boissons pétillantes ?</p>
@@ -165,7 +178,7 @@
                     <!-- 03 Rencontres -->
                     <div class="prog2-bloc">
                         <span class="prog2-bloc__num" aria-hidden="true">03</span>
-                        <div class="prog2-bloc__photo"><img src="assets/images/photo_rencontres.jpg" alt="Rencontres UMAMI"></div>
+                        <div class="prog2-bloc__photo"><img src="assets/images/photo_rencontres.jpg" alt="Rencontres UMAMI" loading="lazy"></div>
                         <div class="prog2-bloc__body">
                             <h3 class="prog2-bloc__title">Rencontres</h3>
                             <p class="prog2-bloc__desc">Le vivant une fabuleuse source d'inspiration et de réflexion. Venez écouter et échanger avec des fermenteur.euses passionné.e.s.</p>
@@ -176,7 +189,7 @@
                     <!-- 04 Prog Kids -->
                     <div class="prog2-bloc prog2-bloc--kids">
                         <span class="prog2-bloc__num" aria-hidden="true">04</span>
-                        <div class="prog2-bloc__photo"><img src="assets/images/photo_kids.jpg" alt="Prog Kids UMAMI"></div>
+                        <div class="prog2-bloc__photo"><img src="assets/images/photo_kids.jpg" alt="Prog Kids UMAMI" loading="lazy"></div>
                         <div class="prog2-bloc__body">
                             <h3 class="prog2-bloc__title">Programme Kids</h3>
                             <p class="prog2-bloc__desc">Cerise sur le gâteau et nouveauté pour les plus petits, nous vous avons préparé une programmation spéciale pour nos petits bouts de choux. Dès 5 ans.</p>
@@ -195,9 +208,9 @@
         <section class="screen screen--black" id="banquet">
 
             <!-- Illustrations — haut de page, côté droit (zone libre au-dessus des cheffes) -->
-            <img src="assets/images/wasabi.png"      class="banquet-illus banquet-illus--1" alt="" aria-hidden="true">
-            <img src="assets/images/vin_naturel.png" class="banquet-illus banquet-illus--2" alt="" aria-hidden="true">
-            <img src="assets/images/fromage.png"     class="banquet-illus banquet-illus--3" alt="" aria-hidden="true">
+            <img src="assets/images/wasabi.png"      class="banquet-illus banquet-illus--1" alt="" aria-hidden="true" loading="lazy">
+            <img src="assets/images/vin_naturel.png" class="banquet-illus banquet-illus--2" alt="" aria-hidden="true" loading="lazy">
+            <img src="assets/images/fromage.png"     class="banquet-illus banquet-illus--3" alt="" aria-hidden="true" loading="lazy">
 
             <div class="banquet-wrap">
 
@@ -211,7 +224,7 @@
                 <div class="banquet-cheffes">
                     <button class="banquet-cheffe" data-modal-open="modal-adelie">
                         <div class="banquet-cheffe__avatar">
-                            <img src="assets/images/portrait_adelie.png" alt="Adélie Delajot">
+                            <img src="assets/images/portrait_adelie.png" alt="Adélie Delajot" loading="lazy">
                         </div>
                         <div class="banquet-cheffe__body">
                             <span class="banquet-cheffe__name">Adélie Delajot</span>
@@ -220,7 +233,7 @@
                     </button>
                     <button class="banquet-cheffe" data-modal-open="modal-annie">
                         <div class="banquet-cheffe__avatar">
-                            <img src="assets/images/portrait_annie.png" alt="Annie Mach">
+                            <img src="assets/images/portrait_annie.png" alt="Annie Mach" loading="lazy">
                         </div>
                         <div class="banquet-cheffe__body">
                             <span class="banquet-cheffe__name">Annie Mach</span>
@@ -229,7 +242,7 @@
                     </button>
                     <button class="banquet-cheffe" data-modal-open="modal-gaelle">
                         <div class="banquet-cheffe__avatar">
-                            <img src="assets/images/portrait_gaelle.png" alt="Gaëlle Valin">
+                            <img src="assets/images/portrait_gaelle.png" alt="Gaëlle Valin" loading="lazy">
                         </div>
                         <div class="banquet-cheffe__body">
                             <span class="banquet-cheffe__name">Gaëlle Valin</span>
@@ -241,18 +254,24 @@
                 <!-- Bande 3 : strip rose — texte riche + infos + CTAs -->
                 <div class="banquet-strip">
                     <div class="banquet-strip__texts">
-                        <p class="banquet-strip__lead">Une table au cœur du vivant.</p>
-                        <p class="banquet-strip__text">Le samedi soir, quand le marché ferme ses portes, le festival change de registre avec une grande table commune et une soirée pensée de bout en bout.</p>
-                        <p class="banquet-strip__text">Trois cheffes réunies autour de la fermentation pour composer un menu végétarien entrée-plat-dessert — kimchi, miso, garum, kéfir — où chaque assiette célèbre le vivant, sublimée par leur talent collectif.</p>
-                        <div class="banquet-strip__pair">
-                            <p class="banquet-strip__text">Chaque cheffe signe un plat en solo puis s'unissent pour un dessert surprise créé à six mains.</p>
-                            <p class="banquet-strip__text">Accord mets &amp; boissons fermentées inclus, avec ou sans alcool.</p>
+                        <div class="banquet-strip__lead-row">
+                            <p class="banquet-strip__lead">Une table au cœur du vivant.</p>
+                            <span class="banquet-strip__meta">Samedi 18 avril · Places ultra limitées · Sur réservation</span>
                         </div>
+                        <p class="banquet-strip__text">Le samedi soir, quand le marché ferme ses portes, le festival change de registre avec une grande table commune et une soirée pensée de bout en bout.</p>
+                        <p class="banquet-strip__text">Trois cheffes réunies autour de la fermentation pour composer un menu végétarien entrée-plat-dessert — kimchi, miso, garum, kéfir —<br>où chaque assiette célèbre le vivant, sublimée par leur talent collectif.</p>
+                        <p class="banquet-strip__text">Chaque cheffe signe un plat en solo puis s'unissent pour un dessert surprise créé à six mains.</p>
                     </div>
                     <div class="banquet-strip__right">
                         <div class="banquet-strip__detail">
-                            <span class="banquet-strip__price">55 €</span>
-                            <span class="banquet-strip__meta">Samedi 18 avril · Places ultra limitées · Sur réservation</span>
+                            <div class="banquet-strip__price-line">
+                                <span class="banquet-strip__price">55 €</span>
+                                <span class="banquet-strip__price-label">avec accord mets &amp; boissons fermentées, avec ou sans alcool</span>
+                            </div>
+                            <div class="banquet-strip__price-line">
+                                <span class="banquet-strip__price banquet-strip__price--secondary">40 €</span>
+                                <span class="banquet-strip__price-label">sans accord</span>
+                            </div>
                         </div>
                         <div class="banquet-strip__ctas">
                             <a href="https://shotgun.live/fr/festivals/umami-5-banquet-fermente" class="btn btn--dark" target="_blank" rel="noopener noreferrer">Réserver</a>
@@ -274,17 +293,18 @@
                     <span class="tag">Infos pratiques</span>
                     <h2 class="big-title">Ici,<br>ça fermente.</h2>
 
-                    <img src="assets/images/mangue.png"        class="infos-illus-png infos-illus-png--6" aria-hidden="true" alt="">
-                    <img src="assets/images/fromage.png"      class="infos-illus-png infos-illus-png--1" aria-hidden="true" alt="">
-                    <img src="assets/images/pickles_rose.png" class="infos-illus-png infos-illus-png--2" aria-hidden="true" alt="">
-                    <img src="assets/images/wasabi.png"       class="infos-illus-png infos-illus-png--3" aria-hidden="true" alt="">
-                    <img src="assets/images/kimchi_vert.png"  class="infos-illus-png infos-illus-png--4" aria-hidden="true" alt="">
-                    <img src="assets/images/miso_soupe.png"   class="infos-illus-png infos-illus-png--5" aria-hidden="true" alt="">
+                    <img src="assets/images/mangue.png"        class="infos-illus-png infos-illus-png--6" aria-hidden="true" alt="" loading="lazy">
+                    <img src="assets/images/fromage.png"      class="infos-illus-png infos-illus-png--1" aria-hidden="true" alt="" loading="lazy">
+                    <img src="assets/images/pickles_rose.png" class="infos-illus-png infos-illus-png--2" aria-hidden="true" alt="" loading="lazy">
+                    <img src="assets/images/wasabi.png"       class="infos-illus-png infos-illus-png--3" aria-hidden="true" alt="" loading="lazy">
+                    <img src="assets/images/kimchi_vert.png"  class="infos-illus-png infos-illus-png--4" aria-hidden="true" alt="" loading="lazy">
+                    <img src="assets/images/miso_soupe.png"   class="infos-illus-png infos-illus-png--5" aria-hidden="true" alt="" loading="lazy">
                 </div>
 
                 <!-- Droite — rose -->
                 <div class="split-right split-right--pink">
-                    <img src="assets/images/kombucha_rose.png" class="infos-illus-r" aria-hidden="true" alt="">
+                    <span class="tag infos-tag-mobile">Infos pratiques</span>
+                    <img src="assets/images/kombucha_rose.png" class="infos-illus-r" aria-hidden="true" alt="" loading="lazy">
                     <div class="info-row">
                         <span class="info-row__label">Dates</span>
                         <span class="info-row__value">Samedi 18 &amp; dimanche 19 avril 2026</span>
@@ -324,13 +344,13 @@
         <footer class="site-footer" id="footer" aria-label="Pied de page">
             <div class="footer-inner">
                 <div class="footer-brand">
-                    <img src="assets/logo-umami.png" alt="UMAMI" class="footer-logo">
+                    <img src="assets/logo-umami.png" alt="UMAMI" class="footer-logo" loading="lazy">
                     <p class="footer-tagline">Fête de la fermentation · Nantes</p>
                 </div>
                 <nav class="footer-nav" aria-label="Liens du bas de page">
                     <a href="https://www.instagram.com/umami_fermentation/" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a>
                     <a href="https://www.facebook.com/events/935576342183844/" class="footer-link" target="_blank" rel="noopener noreferrer">Facebook</a>
-                    <a href="https://shotgun.live/fr/festivals/les-ateliers-umami-2026-18-19-avril" class="btn btn--pink footer-cta" target="_blank" rel="noopener noreferrer">Billetterie Ateliers
+                    <a href="https://shotgun.live/fr/festivals/les-ateliers-umami-2026-18-19-avril" class="btn btn--pink footer-cta" target="_blank" rel="noopener noreferrer">Billetterie Ateliers</a>
                     <a href="https://shotgun.live/fr/festivals/umami-5-banquet-fermente" class="btn btn--pink footer-cta" target="_blank" rel="noopener noreferrer">Billetterie Banquet</a>
                 </nav>
             </div>
@@ -354,12 +374,12 @@
                     <div class="marche__title-row">
                         <h2 class="marche__title">Les exposant·es</h2>
                         <div class="marche__illus">
-                            <img src="assets/images/vin_naturel.png" alt="">
-                            <img src="assets/images/fromage.png" alt="">
-                            <img src="assets/images/kimchi_vert.png" alt="">
-                            <img src="assets/images/miso_soupe.png" alt="">
-                            <img src="assets/images/kombucha_rose.png" alt="">
-                            <img src="assets/images/pickles_rose.png" alt="">
+                            <img src="assets/images/vin_naturel.png" alt="" loading="lazy">
+                            <img src="assets/images/fromage.png" alt="" loading="lazy">
+                            <img src="assets/images/kimchi_vert.png" alt="" loading="lazy">
+                            <img src="assets/images/miso_soupe.png" alt="" loading="lazy">
+                            <img src="assets/images/kombucha_rose.png" alt="" loading="lazy">
+                            <img src="assets/images/pickles_rose.png" alt="" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -389,34 +409,34 @@
 
         <div class="livret__book">
             <div class="livret__spread is-active" data-spread="0">
-                <div class="livret__page"><img src="assets/images/ateliers/atelier-01.png" alt="Anne Devins — Légumes lactofermentés"></div>
-                <div class="livret__page"><img src="assets/images/ateliers/atelier-02.png" alt="Détail atelier légumes fermentés"></div>
+                <div class="livret__page"><img src="assets/images/ateliers/atelier-01.png" alt="Anne Devins — Légumes lactofermentés" loading="lazy"></div>
+                <div class="livret__page"><img src="assets/images/ateliers/atelier-02.png" alt="Détail atelier légumes fermentés" loading="lazy"></div>
             </div>
             <div class="livret__spread" data-spread="1">
-                <div class="livret__page"><img src="assets/images/ateliers/atelier-03.png" alt="Swann Robin — Koji &amp; miso"></div>
-                <div class="livret__page"><img src="assets/images/ateliers/atelier-04.png" alt="Détail atelier koji miso"></div>
+                <div class="livret__page"><img src="assets/images/ateliers/atelier-03.png" alt="Swann Robin — Koji &amp; miso" loading="lazy"></div>
+                <div class="livret__page"><img src="assets/images/ateliers/atelier-04.png" alt="Détail atelier koji miso" loading="lazy"></div>
             </div>
             <div class="livret__spread" data-spread="2">
-                <div class="livret__page"><img src="assets/images/ateliers/atelier-05.png" alt="Atelier 3 — portrait"></div>
-                <div class="livret__page"><img src="assets/images/ateliers/atelier-06.png" alt="Atelier 3 — détail"></div>
+                <div class="livret__page"><img src="assets/images/ateliers/atelier-05.png" alt="Atelier 3 — portrait" loading="lazy"></div>
+                <div class="livret__page"><img src="assets/images/ateliers/atelier-06.png" alt="Atelier 3 — détail" loading="lazy"></div>
             </div>
             <div class="livret__spread" data-spread="3">
-                <div class="livret__page"><img src="assets/images/ateliers/atelier-07.png" alt="Atelier 4 — portrait"></div>
-                <div class="livret__page"><img src="assets/images/ateliers/atelier-08.png" alt="Atelier 4 — détail"></div>
+                <div class="livret__page"><img src="assets/images/ateliers/atelier-07.png" alt="Atelier 4 — portrait" loading="lazy"></div>
+                <div class="livret__page"><img src="assets/images/ateliers/atelier-08.png" alt="Atelier 4 — détail" loading="lazy"></div>
             </div>
             <div class="livret__spread" data-spread="4">
-                <div class="livret__page"><img src="assets/images/ateliers/atelier-09.png" alt="Atelier 5 — portrait"></div>
-                <div class="livret__page"><img src="assets/images/ateliers/atelier-10.png" alt="Atelier 5 — détail"></div>
+                <div class="livret__page"><img src="assets/images/ateliers/atelier-09.png" alt="Atelier 5 — portrait" loading="lazy"></div>
+                <div class="livret__page"><img src="assets/images/ateliers/atelier-10.png" alt="Atelier 5 — détail" loading="lazy"></div>
             </div>
 
             <!-- Page CTA billetterie -->
             <div class="livret__spread livret__spread--single" data-spread="5">
                 <div class="livret__page livret__page--cta">
                     <div class="cta-illus-row">
-                        <img src="assets/images/kombucha_rose.png" alt="" aria-hidden="true">
-                        <img src="assets/images/kimchi_vert.png"   alt="" aria-hidden="true">
-                        <img src="assets/images/mangue.png"        alt="" aria-hidden="true">
-                        <img src="assets/images/pain.png"          alt="" aria-hidden="true">
+                        <img src="assets/images/kombucha_rose.png" alt="" aria-hidden="true" loading="lazy">
+                        <img src="assets/images/kimchi_vert.png"   alt="" aria-hidden="true" loading="lazy">
+                        <img src="assets/images/mangue.png"        alt="" aria-hidden="true" loading="lazy">
+                        <img src="assets/images/pain.png"          alt="" aria-hidden="true" loading="lazy">
                     </div>
                     <div class="cta-body">
                         <h2 class="cta-title">Prêt·e à mettre les mains<br>dans la saumure ?</h2>
@@ -428,10 +448,10 @@
                         <p class="cta-note">Places limitées</p>
                     </div>
                     <div class="cta-illus-row">
-                        <img src="assets/images/wasabi.png"       alt="" aria-hidden="true">
-                        <img src="assets/images/fromage.png"      alt="" aria-hidden="true">
-                        <img src="assets/images/pickles_rose.png" alt="" aria-hidden="true">
-                        <img src="assets/images/kimchi_rouge.png" alt="" aria-hidden="true">
+                        <img src="assets/images/wasabi.png"       alt="" aria-hidden="true" loading="lazy">
+                        <img src="assets/images/fromage.png"      alt="" aria-hidden="true" loading="lazy">
+                        <img src="assets/images/pickles_rose.png" alt="" aria-hidden="true" loading="lazy">
+                        <img src="assets/images/kimchi_rouge.png" alt="" aria-hidden="true" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -450,11 +470,11 @@
                     <div class="marche__title-row">
                         <h2 class="marche__title">Les rencontres</h2>
                         <div class="marche__illus">
-                            <img src="assets/images/mangue.png" alt="">
-                            <img src="assets/images/pain.png" alt="">
-                            <img src="assets/images/wasabi.png" alt="">
-                            <img src="assets/images/kimchi_rouge.png" alt="">
-                            <img src="assets/images/pickles_rose.png" alt="">
+                            <img src="assets/images/mangue.png" alt="" loading="lazy">
+                            <img src="assets/images/pain.png" alt="" loading="lazy">
+                            <img src="assets/images/wasabi.png" alt="" loading="lazy">
+                            <img src="assets/images/kimchi_rouge.png" alt="" loading="lazy">
+                            <img src="assets/images/pickles_rose.png" alt="" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -488,14 +508,14 @@
             <div class="marche__header cheffe__header">
                 <div class="cheffe__header-left">
                     <div class="cheffe__avatar-lg">
-                        <img src="assets/images/portrait_adelie.png" alt="Adélie Delajot">
+                        <img src="assets/images/portrait_adelie.png" alt="Adélie Delajot" loading="lazy">
                     </div>
                     <div class="cheffe__header-meta">
                         <div class="marche__title-row">
                             <h2 class="marche__title">Adélie Delajot</h2>
                             <div class="marche__illus">
-                                <img src="assets/images/fromage.png" alt="">
-                                <img src="assets/images/pickles_rose.png" alt="">
+                                <img src="assets/images/fromage.png" alt="" loading="lazy">
+                                <img src="assets/images/pickles_rose.png" alt="" loading="lazy">
                             </div>
                         </div>
                         <span class="cheffe__header-resto">Le Cellier, Nantes</span>
@@ -516,14 +536,14 @@
             <div class="marche__header cheffe__header">
                 <div class="cheffe__header-left">
                     <div class="cheffe__avatar-lg">
-                        <img src="assets/images/portrait_annie.png" alt="Annie Mach">
+                        <img src="assets/images/portrait_annie.png" alt="Annie Mach" loading="lazy">
                     </div>
                     <div class="cheffe__header-meta">
                         <div class="marche__title-row">
                             <h2 class="marche__title">Annie Mach</h2>
                             <div class="marche__illus">
-                                <img src="assets/images/kimchi_vert.png" alt="">
-                                <img src="assets/images/miso_soupe.png" alt="">
+                                <img src="assets/images/kimchi_vert.png" alt="" loading="lazy">
+                                <img src="assets/images/miso_soupe.png" alt="" loading="lazy">
                             </div>
                         </div>
                         <span class="cheffe__header-resto">Cheffe itinérante</span>
@@ -543,14 +563,14 @@
             <div class="marche__header cheffe__header">
                 <div class="cheffe__header-left">
                     <div class="cheffe__avatar-lg">
-                        <img src="assets/images/portrait_gaelle.png" alt="Gaëlle Valin">
+                        <img src="assets/images/portrait_gaelle.png" alt="Gaëlle Valin" loading="lazy">
                     </div>
                     <div class="cheffe__header-meta">
                         <div class="marche__title-row">
                             <h2 class="marche__title">Gaëlle Valin</h2>
                             <div class="marche__illus">
-                                <img src="assets/images/wasabi.png" alt="">
-                                <img src="assets/images/vin_naturel.png" alt="">
+                                <img src="assets/images/wasabi.png" alt="" loading="lazy">
+                                <img src="assets/images/vin_naturel.png" alt="" loading="lazy">
                             </div>
                         </div>
                         <span class="cheffe__header-resto">Sur le pont, Saint-Aignan</span>
