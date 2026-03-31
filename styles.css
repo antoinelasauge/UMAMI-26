@@ -2443,6 +2443,26 @@ body.modal-is-open { overflow: hidden; }
 }
 
 /* ============================================================
+   RESPONSIVE — Viewport court (≤ 860px, hors mobile)
+   Cible : MacBook 13" Retina — logo hero qui chevauche le contenu,
+   cheffes banquet coupées
+   ============================================================ */
+@media (max-height: 860px) and (min-width: 769px) {
+
+    /* ---- Hero : logo réduit + repoussé vers le bas ---- */
+    .hero-logo {
+        width: 76vw;
+        transform: translateX(-50%) translateY(35%);
+    }
+    .hero-content { top: 3.5rem; }
+
+    /* ---- Banquet : header compressé + avatars réduits ---- */
+    .banquet-header { padding: 3.5rem var(--s8) var(--s4) var(--s8); }
+    .banquet-cheffe { padding: var(--s4) var(--s4) var(--s3); gap: var(--s3); }
+    .banquet-cheffe__avatar { width: 88px; height: 88px; }
+}
+
+/* ============================================================
    ACCESSIBILITÉ — Désactiver animations si demandé
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {
