@@ -204,57 +204,6 @@
 
     document.querySelectorAll('.modal--livret').forEach(initLivret);
 
-    /* ---- Timeline accordion (créneaux horaires Sam/Dim) ---- */
-    document.querySelectorAll('.prog-frise').forEach(function (frise) {
-        var btns   = frise.querySelectorAll('.timeline-btn');
-        var panels = frise.querySelectorAll('.timeline-panel');
-
-        btns.forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                var target = this.getAttribute('data-slot');
-
-                btns.forEach(function (b) {
-                    b.classList.remove('is-active');
-                    b.setAttribute('aria-selected', 'false');
-                });
-                panels.forEach(function (p) { p.classList.remove('is-active'); });
-
-                this.classList.add('is-active');
-                this.setAttribute('aria-selected', 'true');
-                var panel = frise.querySelector('#' + target);
-                if (panel) panel.classList.add('is-active');
-            });
-        });
-    });
-
-    /* ---- Onglets Programme (Vue générale / Samedi / Dimanche) ---- */
-    var tabs    = document.querySelectorAll('.prog-tab');
-    var panels  = {
-        list: document.getElementById('prog-list'),
-        sam:  document.getElementById('prog-sam'),
-        dim:  document.getElementById('prog-dim')
-    };
-
-    tabs.forEach(function (tab) {
-        tab.addEventListener('click', function () {
-            var view = this.getAttribute('data-view');
-
-            /* Désactiver tous les onglets + cacher tous les panels */
-            tabs.forEach(function (t) {
-                t.classList.remove('is-active');
-                t.setAttribute('aria-selected', 'false');
-            });
-            Object.keys(panels).forEach(function (k) {
-                if (panels[k]) panels[k].classList.add('is-hidden');
-            });
-
-            /* Activer l'onglet cliqué + afficher son panel */
-            this.classList.add('is-active');
-            this.setAttribute('aria-selected', 'true');
-            if (panels[view]) panels[view].classList.remove('is-hidden');
-        });
-    });
-
     /* ---- Micro-animation hero : léger zoom au chargement ---- */
     var heroBg = document.getElementById('hero-bg');
     if (heroBg) {
