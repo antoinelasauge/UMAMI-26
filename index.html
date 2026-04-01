@@ -23,8 +23,14 @@
     <!-- Umami Analytics -->
     <script defer src="https://cloud.umami.is/script.js" data-website-id="9027fead-fc28-48c5-87a7-88a69e735983"></script>
 
+    <!-- Preload polices critiques (rendu immédiat sans FOUT) -->
+    <link rel="preload" href="assets/fonts/ABCMaxiRound-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/ABCMaxiRound-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Preload illustrations hero (above the fold) -->
+    <link rel="preload" href="assets/images/vin_naturel.png" as="image">
+    <link rel="preload" href="assets/images/kombucha_rose.png" as="image">
+
     <link rel="preconnect" href="https://unpkg.com">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
     <link rel="stylesheet" href="styles.css">
     <!-- Inline : appliqué avant le premier paint, évite le flash blanc au reload -->
     <style>html,body{background:#F4A7BF}.snap-wrapper{visibility:hidden}</style>
@@ -58,7 +64,7 @@
         </ul>
         <div class="menu-copy">
             <p>© 2026 UMAMI · Festival annuel de la fermentation à Nantes</p>
-            <p>Organisateur.ices : Antoine Devins (<a href="https://www.instagram.com/lagronaute/" class="menu-copy__link" target="_blank" rel="noopener noreferrer">Agronaute</a>), Esther Alcover, Ghita Taghi (<a href="https://www.instagram.com/ateliers.hara/" class="menu-copy__link" target="_blank" rel="noopener noreferrer">Ateliers Hara</a>)</p>
+            <p>Organisateur·ices : Antoine Devins (<a href="https://www.instagram.com/lagronaute/" class="menu-copy__link" target="_blank" rel="noopener noreferrer">Agronaute</a>), Esther Alcover, Ghita Taghi (<a href="https://www.instagram.com/ateliers.hara/" class="menu-copy__link" target="_blank" rel="noopener noreferrer">Ateliers Hara</a>)</p>
         </div>
         <div class="menu-footer">
             <a href="https://shotgun.live/fr/festivals/les-ateliers-umami-2026-18-19-avril" class="btn btn--cream menu-footer__cta" target="_blank" rel="noopener noreferrer" data-umami-event="billetterie-ateliers-menu">Billetterie Ateliers</a>
@@ -189,7 +195,7 @@
                         <div class="prog2-bloc__photo"><img src="assets/images/photo_rencontres.jpg" alt="Rencontres UMAMI" loading="lazy"></div>
                         <div class="prog2-bloc__body">
                             <h3 class="prog2-bloc__title">Rencontres</h3>
-                            <p class="prog2-bloc__desc">Le vivant une fabuleuse source d'inspiration et de réflexion. Venez écouter et échanger avec des fermenteur.euses passionné.e.s.</p>
+                            <p class="prog2-bloc__desc">Le vivant une fabuleuse source d'inspiration et de réflexion. Venez écouter et échanger avec des fermenteur·euses passionné·es.</p>
                             <button class="btn btn--dark prog2-bloc__cta" data-modal-open="modal-rencontres" data-umami-event="modal-rencontres">Voir les rencontres</button>
                         </div>
                     </div>
@@ -271,7 +277,7 @@
                         </div>
                         <p class="banquet-strip__text">Le samedi soir, quand le marché ferme ses portes, le festival change de registre avec une grande table commune et une soirée pensée de bout en bout.</p>
                         <p class="banquet-strip__text">Trois cheffes réunies autour de la fermentation pour composer un menu végétarien entrée-plat-dessert — kimchi, miso, garum, kéfir —<br>où chaque assiette célèbre le vivant, sublimée par leur talent collectif.</p>
-                        <p class="banquet-strip__text">Chaque cheffe signe un plat en solo puis s'unissent pour un dessert surprise créé à six mains.</p>
+                        <p class="banquet-strip__text">Chaque cheffe signe un plat en solo, avant de s'unir pour un dessert surprise créé à six mains.</p>
                     </div>
                     <div class="banquet-strip__right">
                         <div class="banquet-strip__detail">
@@ -371,7 +377,7 @@
             <div class="footer-copy">
                 <div class="footer-copy__left">
                     <p>© 2026 UMAMI · Festival annuel de la fermentation à Nantes</p>
-                    <p>Organisateur.ices : Antoine Devins (<a href="https://www.instagram.com/lagronaute/" class="footer-credit-link" target="_blank" rel="noopener noreferrer">Agronaute</a>), Esther Alcover, Ghita Taghi (<a href="https://www.instagram.com/ateliers.hara/" class="footer-credit-link" target="_blank" rel="noopener noreferrer">Ateliers Hara</a>)</p>
+                    <p>Organisateur·ices : Antoine Devins (<a href="https://www.instagram.com/lagronaute/" class="footer-credit-link" target="_blank" rel="noopener noreferrer">Agronaute</a>), Esther Alcover, Ghita Taghi (<a href="https://www.instagram.com/ateliers.hara/" class="footer-credit-link" target="_blank" rel="noopener noreferrer">Ateliers Hara</a>)</p>
                 </div>
                 <p>Site fermenté par <a href="https://www.linkedin.com/in/matthieu-duval-pm/" class="footer-credit-link" target="_blank" rel="noopener noreferrer">Matthieu Duval</a></p>
             </div>
