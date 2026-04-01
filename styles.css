@@ -96,7 +96,8 @@ em   { font-style: italic; }
    SNAP WRAPPER
    ============================================================ */
 .snap-wrapper {
-    height: 100vh;
+    height: 100vh;    /* fallback */
+    height: 100svh;   /* iOS fix : small viewport height, exclut la chrome du navigateur */
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scrollbar-width: none;
@@ -107,7 +108,8 @@ em   { font-style: italic; }
    SCREENS
    ============================================================ */
 .screen {
-    height: 100vh;
+    height: 100vh;    /* fallback */
+    height: 100svh;   /* iOS fix : small viewport height, exclut la chrome du navigateur */
     scroll-snap-align: start;
     position: relative;
     overflow: hidden;
@@ -468,7 +470,7 @@ em   { font-style: italic; }
    HERO — Fond rose plein, texte top-left, logo grand en bas
    ============================================================ */
 #hero { background: var(--pink); }
-/* .screen fournit : position: relative; overflow: hidden; height: 100vh */
+/* .screen fournit : position: relative; overflow: hidden; height: 100svh */
 
 /* Wording top-left — comme la v0.6 */
 .hero-content {
