@@ -102,7 +102,16 @@
         });
     });
 
-    /* ---- Couleur adaptative du trigger + scroll hint ---- */
+    /* ---- Couleur adaptative du trigger + scroll hint + fond body ---- */
+    var sectionBg = {
+        'hero':       '#F4A7BF',
+        'about':      '#111111',
+        'programme':  '#FAF4E8',
+        'banquet':    '#111111',
+        'infos':      '#FAF4E8',
+        'footer':     '#111111'
+    };
+
     var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
             if (entry.intersectionRatio >= 0.5) {
@@ -114,6 +123,11 @@
                     scrollHint.classList.toggle('is-hidden', isLast);
                     scrollHint.classList.toggle('scroll-hint--light', isDark);
                 }
+                /* E — Morphing couleur fond body */
+                var bg = sectionBg[entry.target.id];
+                if (bg) document.body.style.background = bg;
+                /* D — Couleur curseur selon section */
+                if (cursorEl) cursorEl.classList.toggle('cursor--light', isDark);
             }
         });
     }, { threshold: 0.5 });
@@ -354,6 +368,40 @@
         /* Reduced motion ou pas de snap-wrapper : sections visibles immédiatement */
         document.querySelectorAll('.screen, #footer').forEach(function (s) {
             s.classList.add('section-visible');
+        });
+    }
+
+    /* ---- D — Curseur personnalisé (desktop uniquement) ---- */
+    var cursorEl = null;
+    if (!isTouch && !prefersReduced) {
+        cursorEl = document.createElement('div');
+        cursorEl.className = 'cursor';
+        document.body.appendChild(cursorEl);
+        document.body.classList.add('has-cursor');
+
+        document.addEventListener('mousemove', function (e) {
+            cursorEl.style.left = e.clientX + 'px';
+            cursorEl.style.top  = e.clientY + 'px';
+        });
+
+        document.querySelectorAll('a, button, [data-modal-open], [data-target]').forEach(function (el) {
+            el.addEventListener('mouseenter', function () { cursorEl.classList.add('cursor--hover'); });
+            el.addEventListener('mouseleave', function () { cursorEl.classList.remove('cursor--hover'); });
+        });
+    }
+
+    /* ---- F — Boutons magnétiques (desktop uniquement) ---- */
+    if (!isTouch && !prefersReduced) {
+        document.querySelectorAll('.btn').forEach(function (btn) {
+            btn.addEventListener('mousemove', function (e) {
+                var r  = btn.getBoundingClientRect();
+                var dx = (e.clientX - (r.left + r.width  / 2)) * 0.28;
+                var dy = (e.clientY - (r.top  + r.height / 2)) * 0.28;
+                btn.style.transform = 'translate(' + dx.toFixed(1) + 'px, ' + (dy - 3).toFixed(1) + 'px)';
+            });
+            btn.addEventListener('mouseleave', function () {
+                btn.style.transform = '';
+            });
         });
     }
 
