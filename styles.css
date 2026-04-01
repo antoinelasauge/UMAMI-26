@@ -92,6 +92,49 @@ em   { font-style: italic; }
 :focus-visible { outline: 3px solid var(--pink-deep); outline-offset: 3px; }
 
 /* ============================================================
+   GRAIN — texture film analogique (CSS pur, pointer-events: none)
+   ============================================================ */
+body::after {
+    content: '';
+    position: fixed;
+    inset: -50%;
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.038;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.68' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 180px 180px;
+    animation: grain 0.9s steps(3) infinite;
+}
+@keyframes grain {
+    0%   { transform: translate(0, 0); }
+    15%  { transform: translate(-2%, -3%); }
+    30%  { transform: translate(3%, 1%); }
+    45%  { transform: translate(-1%, 4%); }
+    60%  { transform: translate(3%, -2%); }
+    75%  { transform: translate(-2%, 2%); }
+    90%  { transform: translate(2%, -3%); }
+    100% { transform: translate(0, 0); }
+}
+
+/* ============================================================
+   PARALLAX ILLUSTRATIONS — transform séparé de translate (float)
+   ============================================================ */
+[data-parallax] {
+    will-change: transform;
+    transition: transform 0.12s ease-out;
+}
+
+/* ============================================================
+   PREFERS-REDUCED-MOTION — désactive grain animé + parallax
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+    body::after { animation: none; }
+    [data-parallax] { transition: none; }
+}
+
+/* ============================================================
    SNAP WRAPPER
    ============================================================ */
 .snap-wrapper {
