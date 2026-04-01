@@ -390,21 +390,6 @@
         });
     }
 
-    /* ---- F — Boutons magnétiques (desktop uniquement) ---- */
-    if (!isTouch && !prefersReduced) {
-        document.querySelectorAll('.btn').forEach(function (btn) {
-            btn.addEventListener('mousemove', function (e) {
-                var r  = btn.getBoundingClientRect();
-                var dx = (e.clientX - (r.left + r.width  / 2)) * 0.28;
-                var dy = (e.clientY - (r.top  + r.height / 2)) * 0.28;
-                btn.style.transform = 'translate(' + dx.toFixed(1) + 'px, ' + (dy - 3).toFixed(1) + 'px)';
-            });
-            btn.addEventListener('mouseleave', function () {
-                btn.style.transform = '';
-            });
-        });
-    }
-
     /* ---- Parallax illustrations — souris (desktop uniquement) ---- */
     if (!isTouch && !prefersReduced) {
         var parallaxEls = document.querySelectorAll('[data-parallax]');
