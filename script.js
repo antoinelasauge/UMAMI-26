@@ -10,10 +10,14 @@
        On l'écrase via pageshow + rAF pour s'assurer de passer après la restauration. */
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 
+    var snapReady = false; /* bloque le morphing body-bg tant que le scroll n'est pas reset */
+
     function resetScroll() {
         var wrapper = document.querySelector('.snap-wrapper');
         if (wrapper) {
             wrapper.scrollTop = 0;
+            snapReady = true;
+            document.body.style.background = ''; /* annule toute couleur posée par l'observer avant init */
             wrapper.classList.add('is-ready'); /* révèle le wrapper après reset — évite flash */
         }
         window.scrollTo(0, 0);
@@ -123,9 +127,9 @@
                     scrollHint.classList.toggle('is-hidden', isLast);
                     scrollHint.classList.toggle('scroll-hint--light', isDark);
                 }
-                /* E — Morphing couleur fond body */
+                /* E — Morphing couleur fond body (seulement après init scroll) */
                 var bg = sectionBg[entry.target.id];
-                if (bg) document.body.style.background = bg;
+                if (bg && snapReady) document.body.style.background = bg;
                 /* D — Couleur curseur selon section */
                 if (cursorEl) cursorEl.classList.toggle('cursor--light', isDark);
             }
