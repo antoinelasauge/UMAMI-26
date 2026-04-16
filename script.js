@@ -195,7 +195,22 @@
     document.querySelectorAll('.modal').forEach(function (modal) {
         var closeBtn = modal.querySelector('.modal__close');
         if (closeBtn) closeBtn.addEventListener('click', function () { closeModal(modal); });
+
+        /* Fermeture backdrop — click (desktop) + touchend (iOS) */
         modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(modal); });
+
+        /* iOS : le click sur un div non-interactif peut ne pas se déclencher.
+           On écoute touchend avec détection de scroll (touchMoved) pour éviter
+           de fermer lors d'un swipe de scroll. */
+        var _touchMoved = false;
+        modal.addEventListener('touchstart', function () { _touchMoved = false; }, { passive: true });
+        modal.addEventListener('touchmove',  function () { _touchMoved = true;  }, { passive: true });
+        modal.addEventListener('touchend', function (e) {
+            if (!_touchMoved && e.target === modal) {
+                e.preventDefault();
+                closeModal(modal);
+            }
+        });
     });
 
     document.addEventListener('keydown', function (e) {
@@ -274,6 +289,17 @@
         if (closeBtn) closeBtn.addEventListener('click', function () { closeModal(modal); setTimeout(reset, 350); });
         modal.addEventListener('click', function (e) {
             if (e.target === modal) { closeModal(modal); setTimeout(reset, 350); }
+        });
+        /* iOS touchend sur le backdrop (livret) */
+        var _livretTouchMoved = false;
+        modal.addEventListener('touchstart', function () { _livretTouchMoved = false; }, { passive: true });
+        modal.addEventListener('touchmove',  function () { _livretTouchMoved = true;  }, { passive: true });
+        modal.addEventListener('touchend', function (e) {
+            if (!_livretTouchMoved && e.target === modal) {
+                e.preventDefault();
+                closeModal(modal);
+                setTimeout(reset, 350);
+            }
         });
 
         reset();
